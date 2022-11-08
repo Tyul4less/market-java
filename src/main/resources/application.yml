@@ -1,0 +1,12 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://222.109.214.189:5001/MARKET?serverTimezone=UTC&characterEncoding=UTF-8
+        username: market
+        password: 1111
+
+mybatis:
+        mapper-locations: classpath*:sqlMapper/*.xml
+        type-aliases-package: com.dawon.market
+
+
