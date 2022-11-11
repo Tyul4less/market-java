@@ -3,6 +3,7 @@ package com.dawon.market.controller;
 import com.dawon.market.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,11 +18,12 @@ public class UserController {
 
 
     @GetMapping("/getUser")
-    public void userTest(){
+    public int userTest(){
 
         int user = userService.getUser();
 
         log.info("userMapper.getUser() ={}", user);
 
+        return user;
     }
 }
